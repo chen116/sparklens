@@ -7,20 +7,20 @@ crossScalaVersions := Seq("2.10.6", "2.11.8")
 
 spName := "qubole/sparklens"
 
-sparkVersion := "2.0.0"
+sparkVersion := "2.4.0"
 
 spAppendScalaVersion := true
 
 
 libraryDependencies += "org.apache.spark" %% "spark-core" % sparkVersion.value % "provided"
 
-libraryDependencies +=  "org.apache.hadoop" % "hadoop-client" % "2.6.5" % "provided"
+libraryDependencies +=  "org.apache.hadoop" % "hadoop-client" % "2.8.5" % "provided"
 
 testOptions in Test += Tests.Argument("-oF")
 
-scalacOptions ++= Seq("-target:jvm-1.7")
+scalacOptions ++= Seq("-target:jvm-1.8")
 
-javacOptions ++= Seq("-source", "1.7", "-target", "1.7")
+javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
 publishMavenStyle := true
 
